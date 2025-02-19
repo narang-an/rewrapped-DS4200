@@ -5,10 +5,92 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Song Popularity Visualization</title>
     <script src="https://d3js.org/d3.v7.min.js"></script>
-    <!-- D3.js library -->
+    <style>
+      .bar-chart {
+        margin: 20px;
+      }
+      .bar {
+        fill: #1DB954;
+      }
+      .bar:hover {
+        fill: #1ed760;
+      }
+      .axis-label {
+        font-size: 12px;
+      }
+      .chart-title {
+        font-size: 20px;
+        text-align: center;
+      }
+    </style>
   </head>
   <body>
-    <p>hi!</p>
-    <%= JSON.stringify(data) %>
+    <h1 class="chart-title">Your Top 10 Tracks</h1>
+    <div id="visualization"></div>
+
+    <script>
+      // Parse the data passed from the server
+      const tracksData = <%- JSON.stringify(data) %>;
+      const top10Tracks = tracksData.slice(0, 10);
+
+      // Set up the dimensions
+      const margin = { top: 30, right: 30, bottom: 90, left: 60 };
+      const width = 800 - margin.left - margin.right;
+      const height = 400 - margin.top - margin.bottom;
+
+      // Create SVG container
+      const svg = d3.select("#visualization")
+        .append("svg")
+        .attr("width", width + margin.left + margin.right)
+        .attr("height", height + margin.top + margin.bottom)
+        .append("g")
+        .attr("transform", `translate(${margin.left},${margin.top})`);
+
+      // Create scales
+      const x = d3.scaleBand()
+        .range([0, width])
+        .domain(top10Tracks.map(d => d.name))
+        .padding(0.2);
+
+      const y = d3.scaleLinear()
+        .domain([0, d3.max(top10Tracks, d => d.popularity)])
+        .range([height, 0]);
+
+      // Add X axis
+      svg.append("g")
+        .attr("transform", `translate(0,${height})`)
+        .call(d3.axisBottom(x))
+        .selectAll("text")
+        .attr("transform", "translate(-10,0)rotate(-45)")
+        .style("text-anchor", "end");
+
+      // Add Y axis
+      svg.append("g")
+        .call(d3.axisLeft(y));
+
+      // Add Y axis label
+      svg.append("text")
+        .attr("transform", "rotate(-90)")
+        .attr("y", 0 - margin.left)
+        .attr("x", 0 - (height / 2))
+        .attr("dy", "1em")
+        .style("text-anchor", "middle")
+        .text("Popularity Score");
+
+      // Create bars
+      svg.selectAll("rect")
+        .data(top10Tracks)
+        .join("rect")
+        .attr("class", "bar")
+        .attr("x", d => x(d.name))
+        .attr("y", d => y(d.popularity))
+        .attr("width", x.bandwidth())
+        .attr("height", d => height - y(d.popularity));
+
+      // Add tooltips
+      svg.selectAll("rect")
+        .append("title")
+        .text(d => `${d.name} by ${d.artists[0].name}\nPopularity: ${d.popularity}`);
+    </script>
   </body>
 </html>

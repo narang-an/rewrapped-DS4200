@@ -102,8 +102,7 @@ app.get("/top-tracks", async (req, res) => {
       } = track;
       return trackWithoutMarkets;
     });
-    res.json({ cleanedItems });
-    //res.render("dashboard", { data: cleanedItems });
+    res.render("top-tracks/index", { data: cleanedItems });
   } catch (error) {
     res.status(500).json({ error: "Failed to fetch top tracks" });
   }
