@@ -3,12 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Spotify ReWrapped</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-    <nav>
-        <a href="song_pop.html">song pop</a>
+    <nav class="navbar">
+        <div class="nav-content">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#graph1">Graph 1</a></li>
+                <li><a href="#graph2">Graph 2</a></li>
+                <li><a href="#graph3">Graph 3</a></li>
+                <li><a href="#graph4">Graph 4</a></li>
+                <li><a href="linegraph/linegraph.html">Graph 5</a></li>
+                <li><a href="about.html">About Us</a></li>
+            </ul>
+            <div class="website-name">Spotify ReWrapped</div>
+        </div>
     </nav>
-    <p>Hello</p>
+
+    <div class="container">
+        <section class="intro">
+            <h1>Welcome to Spotify ReWrapped</h1>
+            <p>insert description here</p>
+        </section>
+
+        <div class="button-grid">
+            <button class="graph-button" onclick="window.location.href='#graph1'">
+                Graph 1
+            </button>
+            <button class="graph-button" onclick="window.location.href='#graph2'">
+                Graph 2
+            </button>
+            <button class="graph-button" onclick="window.location.href='#graph3'">
+                Graph 3
+            </button>
+            <button class="graph-button" onclick="window.location.href='#graph4'">
+                Graph 4
+            </button>
+            <button class="graph-button" onclick="window.location.href='linegraph/linegraph.html'">
+                Average Song Duration Over Time
+            </button>
+        </div>
+    </div>
 </body>
 </html>
+
