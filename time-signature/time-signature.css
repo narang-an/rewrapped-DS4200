@@ -100,3 +100,11 @@
     border-radius: 8px;
     margin-top: 80px;
 } 
+
+
+p {
+    padding-top: 20px;
+    padding-bottom: 5px;
+    padding-left: 7%;
+    padding-right: 7%;
+}
