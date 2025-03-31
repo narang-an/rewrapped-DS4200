@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Faculty+Glyphic&display=swap');
 
 * {
     margin: 0;
@@ -8,7 +9,7 @@
 
 
 body {
-    font-family: '', serif;
+    font-family: 'Faculty Glyphic', sans-serif;
     line-height: 1.6;
 }
 
