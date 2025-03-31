@@ -1,0 +1,102 @@
+/* Import base styles */
+@import url('../styles.css');
+
+/* Word cloud specific container styling */
+#vis {
+    border-radius: 8px;
+    margin-top: 80px;
+}
+
+/* Vega-Embed specific styling */
+#vis.vega-embed {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#vis.vega-embed details,
+#vis.vega-embed details summary {
+    position: relative;
+}
+
+/* Vega controls styling */
+.vega-embed .vega-actions {
+    background-color: #404040 !important;
+    border: none !important;
+    border-radius: 4px;
+    padding: 0.5rem !important;
+}
+
+.vega-embed .vega-actions a {
+    color: #ffffff !important;
+    text-decoration: none !important;
+    padding: 0.5rem 1rem !important;
+    transition: color 0.3s ease;
+}
+
+.vega-embed .vega-actions a:hover {
+    color: #1DB954 !important;
+}
+
+/* Title styling */
+.vega-embed .chart-title {
+    font-family: 'Playfair Display', serif !important;
+    color: #ffffff !important;
+    font-size: 1.5rem !important;
+    margin-bottom: 1rem !important;
+}
+
+/* Tooltip styling */
+#vg-tooltip-element {
+    background-color: #404040 !important;
+    border: none !important;
+    border-radius: 4px !important;
+    color: #ffffff !important;
+    font-family: 'Playfair Display', serif !important;
+    padding: 0.5rem 1rem !important;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* Container for the visualization */
+.visualization-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* Responsive design for visualization */
+@media (max-width: 768px) {
+    #vis {
+        padding: 1rem;
+        margin-top: 120px;
+    }
+
+    .visualization-container {
+        padding: 1rem;
+    }
+
+    #vis.vega-embed {
+        transform: scale(0.8);
+    }
+}
+
+/* Loading state */
+.loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    color: #1DB954;
+    font-size: 1.2rem;
+}
+
+/* Error state */
+.error-message {
+    color: #ff4444;
+    text-align: center;
+    padding: 2rem;
+    background-color: #282828;
+    border-radius: 8px;
+    margin-top: 80px;
+} 

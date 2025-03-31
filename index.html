@@ -12,12 +12,21 @@
         <div class="nav-content">
             <ul class="nav-links">
                 <li><a href="wordcloud/word_cloud.html">Word Cloud</a></li>
-                <li><a href="barplot/barplot.html">Barplot</a></li>
-                <li><a href="barchart/barchart.html">Barchart</a></li>
-                <li><a href="popularity-scatterplot/pop-scatterplot.html">Scatterplot</li>
-                <li><a href="time-signature/time-signature.html">Time signature</a></li>
-                <li><a href="linegraph/linegraph.html">Graph 5</a></li>
-                <li><a href="about.html">About Us</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">Barplots ▼</a>
+                    <div class="dropdown-content">
+                        <a href="barplot/barplot.html">Number of Songs by Key</a>
+                        <a href="barchart/barchart.html">Various Features by Key</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">Scatterplots ▼</a>
+                    <div class="dropdown-content">
+                        <a href="popularity-scatterplot/pop-scatterplot.html">Various Features by Popularity</a>
+                        <a href="time-signature/time-signature.html">Danceability by Time Signature</a>
+                    </div>
+                </li>
+                <li><a href="linegraph/linegraph.html">Linegraph</a></li>
             </ul>
             <div class="website-name"><a href="index.html">Spotify ReWrapped</a></div>
         </div>
@@ -26,8 +35,17 @@
     <div class="container">
         <section class="intro">
             <h1>Welcome to Spotify ReWrapped</h1>
-            <p>insert description here</p>
         </section>
+
+        <p>Music is an integral part of our daily lives, and it can reflect our moods, routines, and cultural influences. With streaming platforms like Spotify, music consumption has become more accessible and personalized than ever. These platforms generate vast amounts of data that reveal individual listening habits, including top genres, favorite artists, and frequently played songs. Analyzing this data can reveal unique patterns, highlighting both shared and distinct musical preferences among users.
+            This project aims to build on that idea by creating a personalized Spotify Wrapped experience. Given its popularity, our goal is to develop our own version using the Spotify API, which can offer users deeper insights into their listening habits. By leveraging this data, we can uncover intriguing patterns and trends, providing an engaging way for users to interact with  their music statistics.
+            
+            Related Work
+            Existing research has explored various approaches to analyzing and visualizing user listening behavior. The paper "Spotify Recommendation System" by Bangera et al. explores a content-based recommendation system to enhance user-artist interactions on Spotify. It leverages Spotify's audio feature data and machine learning to generate personalized song recommendations based on user preferences with the goal of improving music discovery. This research highlights the importance of personalized recommendations in improving user experience and engagement with music platforms (Bangera et al., 2023).
+            Another Study, “Data Spotlight: How Spotify Wrapped Makes Music Data Feel Personable” from the University of Miami, discusses the success of Spotify Wrapped and its impact on user engagement. One user wrote, “seeing top songs on Spotify Wrapped is like seeing an old best friend that you lost touch with.” By presenting data insights rather than raw data itself, Spotify tells a “story” with its data. The author argues that music is an inherently social experience and by presenting this data in a way meant to be shared with others spotify gains organic engagement from their users who want to post their spotify wrapped for friends and family to see.
+            Our project aims to create similarly engaging data experiences as mentioned by the reference papers. This first picture is of our primary inspiration, showcasing a Spotify Wrapped result. It includes details like total time listened, top artists, top songs, and top genres, which are key elements we aim to analyze and present in our own version of the platform.
+            To build on this idea, we aim to create something similar to this second picture of Spotify Data Analysis, showcasing personalized insights into users’ listening habits. Similar to this example, we will use visualization elements such as bar charts and line graphs to highlight top artists, most played songs, favorite genres, and unique listening trends. Our goal is to offer an engaging, data-driven experience that helps users reflect on their music preferences in a fun and interactive way.
+        </p>
 
         <div class="button-grid">
             <button class="graph-button" onclick="window.location.href='#graph1'">

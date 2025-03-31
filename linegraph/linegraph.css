@@ -1,3 +1,6 @@
+
+@import url('../styles.css');
+
 #chart {
     min-height: 400px;
     border: 1px solid #ccc;
