@@ -1,6 +1,25 @@
 /* Import base styles */
 @import url('../styles.css');
 
+/* Container and column layout */
+.container {
+    display: flex;
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    flex-direction: row-reverse;
+}
+
+.text-column {
+    flex: 1;
+    max-width: 600px;
+}
+
+.vis-column {
+    flex: 1;
+}
+
 /* Visualization container styling */
 #vis {
     background-color: white;
@@ -14,16 +33,12 @@
 /* Vega-Embed specific styling */
 #vis.vega-embed {
     width: 100%;
-    height: auto;
-    padding: 0;
     display: flex;
-    justify-content: center;
 }
 
-/* Hide Vega-Embed actions by default */
 #vis.vega-embed details,
-.vega-embed details {
-    display: none;
+#vis.vega-embed details summary {
+    position: relative;
 }
 
 /* Style Vega action menu */

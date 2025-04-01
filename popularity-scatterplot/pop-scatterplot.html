@@ -2,18 +2,7 @@
 <html>
   <head>
     <meta charset="UTF-8" />
-    <style>
-      #vis.vega-embed {
-        width: 100%;
-        display: flex;
-      }
-
-      #vis.vega-embed details,
-      #vis.vega-embed details summary {
-        position: relative;
-      }
-    </style>
-     <link rel="stylesheet" href="pop-scatterplot.css">
+    <link rel="stylesheet" href="pop-scatterplot.css">
     <script
       type="text/javascript"
       src="https://cdn.jsdelivr.net/npm/vega@5"
@@ -50,49 +39,66 @@
           </ul>
           <div class="website-name"><a href="../index.html">Spotify ReWrapped</a></div>
       </div>
-  </nav>
-    <p>
-      This graph provides an analysis of song popularity in relation to various
-      attributes. We can observe that most songs have a popularity score between
-      50 and 90, suggesting that in order for a song to be someone’s favorite,
-      it must be at least somewhat popular or well-known. When comparing
-      popularity vs. duration, there appears to be a straight horizontal line
-      relationship, with most songs having a duration between 100,000 to 300,000
-      milliseconds. This suggests that song duration does not have a significant
-      impact on popularity, as songs within this range are fairly consistent in
-      terms of popularity. The relationship between danceability and popularity
-      seems scattered, with no clear linear correlation. Most songs fall within
-      a danceability range of 0.4 to 0.8, but there doesn’t appear to be a
-      strong pattern linking these scores with popularity. For energy vs.
-      popularity, we see a wide range of values, indicating that listeners have
-      diverse preferences for energy levels, and thus, energy does not seem to
-      influence popularity. In the case of loudness vs. popularity, there is no
-      discernible relationship, although most songs fall within a loudness range
-      of -10 to -5 dB. This suggests that loudness does not significantly impact
-      a song's popularity. Regarding speechiness, most songs have a speechiness
-      score under 0.1, with a few outliers. This suggests that most popular
-      songs tend to have relatively low speech content, though the outliers
-      could indicate exceptions. Acousticness exhibits a broad range, making it
-      difficult to draw meaningful conclusions from this attribute in relation
-      to popularity. When analyzing instrumentalness, most songs have a low
-      instrumentalness score, indicating that listeners generally prefer songs
-      with less instrumental content. For liveliness (energy), the liveness
-      score tends to hover around 0.1 to 0.2, with a few outliers above 0.2,
-      suggesting that most people prefer songs with a more lively sound, but
-      there are a few exceptions. Valence, which measures musical positivity or
-      happiness, is widely distributed, making it challenging to identify any
-      trends connecting it to popularity. Finally, when examining tempo, most
-      songs have a tempo between 80 and 140 BPM, which reflects a common tempo
-      range for popular music. Overall, this visualization shows that while
-      there are some trends, there’s a lot of diversity in how various
-      attributes correlate with song popularity, and personal preferences play a
-      significant role in what people enjoy.
+    </nav>
+
+    <section class="intro">
+      <h1>Scatterplot of Popularity vs. Selected Metric</h1>
+    </section>
+
+    <p style="text-align: center;">
+      This visualization is interactive! Hover over a point to see the popularity score and the selected metric.
+      Choose a y-axis parameter from the dropdown menu below.
     </p>
-    <div id="vis"></div>
+
+    <div class="container">
+      <div class="text-column">
+        <h2>Description</h2>
+        <p>
+          This graph provides an analysis of song popularity in relation to various
+          attributes. We can observe that most songs have a popularity score between
+          50 and 90, suggesting that in order for a song to be someone's favorite,
+          it must be at least somewhat popular or well-known. When comparing
+          popularity vs. duration, there appears to be a straight horizontal line
+          relationship, with most songs having a duration between 100,000 to 300,000
+          milliseconds. This suggests that song duration does not have a significant
+          impact on popularity, as songs within this range are fairly consistent in
+          terms of popularity. The relationship between danceability and popularity
+          seems scattered, with no clear linear correlation. Most songs fall within
+          a danceability range of 0.4 to 0.8, but there doesn't appear to be a
+          strong pattern linking these scores with popularity. For energy vs.
+          popularity, we see a wide range of values, indicating that listeners have
+          diverse preferences for energy levels, and thus, energy does not seem to
+          influence popularity. In the case of loudness vs. popularity, there is no
+          discernible relationship, although most songs fall within a loudness range
+          of -10 to -5 dB. This suggests that loudness does not significantly impact
+          a song's popularity. Regarding speechiness, most songs have a speechiness
+          score under 0.1, with a few outliers. This suggests that most popular
+          songs tend to have relatively low speech content, though the outliers
+          could indicate exceptions. Acousticness exhibits a broad range, making it
+          difficult to draw meaningful conclusions from this attribute in relation
+          to popularity. When analyzing instrumentalness, most songs have a low
+          instrumentalness score, indicating that listeners generally prefer songs
+          with less instrumental content. For liveliness (energy), the liveness
+          score tends to hover around 0.1 to 0.2, with a few outliers above 0.2,
+          suggesting that most people prefer songs with a more lively sound, but
+          there are a few exceptions. Valence, which measures musical positivity or
+          happiness, is widely distributed, making it challenging to identify any
+          trends connecting it to popularity. Finally, when examining tempo, most
+          songs have a tempo between 80 and 140 BPM, which reflects a common tempo
+          range for popular music. Overall, this visualization shows that while
+          there are some trends, there's a lot of diversity in how various
+          attributes correlate with song popularity, and personal preferences play a
+          significant role in what people enjoy.
+        </p>
+      </div>
+      <div class="vis-column">
+        <div id="vis"></div>
+      </div>
+    </div>
     <script>
       (function (vegaEmbed) {
         var spec = {
-          config: { view: { continuousWidth: 300, continuousHeight: 300 } },
+          config: { view: { continuousWidth: 500, continuousHeight: 500 } },
           data: { name: "data-bc7db5f1d8527815853e1b7c22a08023" },
           mark: { type: "circle" },
           encoding: {
