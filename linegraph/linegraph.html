@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Song Duration Over Time</title>
     <script src="https://d3js.org/d3.v7.min.js"></script>
     <link rel="stylesheet" href="linegraph.css">
 </head>
@@ -29,8 +28,37 @@
             <div class="website-name"><a href="../index.html">Spotify ReWrapped</a></div>
         </div>
     </nav>
-    <h1>Song Duration Over Time</h1>
-    <div id="chart"></div>
+    
+    <section class="intro">
+        <h1>Song Duration Over Time Line Graph</h1>
+    </section>
+  
+    <p style="text-align: center;">
+        This visualization is interactive! Hover over a point to see the average, max, and min duration of songs in that decade.
+    </p>
+
+    <div class="content-container">
+        <div class="visualization-column">
+            <div id="chart"></div>
+        </div>
+        <div class="description-column">
+            <div class="description">
+                <h2>Description</h2>
+                <p>
+                    This line graph shows the average, max, and min duration of songs in each decade.
+                    The x-axis represents the decade, and the y-axis represents the duration of the songs.
+                    The line represents the average duration of the songs in that decade.
+
+                    The graph displays the average song duration by decade, highlighting notable changes over time. 
+                    In the 1900s, the average song length was 4.21 minutes, with durations ranging from 3.72 to 5.03 minutes. 
+                    This gradually declined through the 1960s, reaching an average of 3.95 minutes, despite a wider range of durations from 2.49 to 5.41 minutes. 
+                    The 1970s marked a significant spike, with the average jumping to 6.80 minutes and an extreme maximum of 17.09 minutes, indicating an era of longer compositions—possibly due to the influence of progressive rock and extended improvisational tracks. 
+                    By the 1990s, durations returned closer to earlier norms with an average of 4.02 minutes. This trend continued into the 2000s (4.21 min) before decreasing again in the 2010s (3.76 min) and the 2020s (3.70 min), which also saw a wide range (2.29 to 7.31 min). 
+                    Overall, while song lengths have fluctuated, there is a clear reversion to shorter formats in recent decades, aligning with trends favoring brevity and streaming-friendly content.
+                </p>
+            </div>
+        </div>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>

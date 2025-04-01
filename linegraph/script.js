@@ -1,7 +1,7 @@
 // Set the dimensions and margins of the graph
 const margin = {top: 40, right: 40, bottom: 60, left: 60};
-const width = 800 - margin.left - margin.right;
-const height = 400 - margin.top - margin.bottom;
+const width = 600 - margin.left - margin.right;
+const height = 300 - margin.top - margin.bottom;
 
 // Create SVG container
 const svg = d3.select("#chart")
@@ -22,7 +22,8 @@ d3.csv("../data/ds4200_spotify_data.csv")
     .then(function(data) {
         console.log("Data loaded successfully:", data); // Debug log
 
-        // Convert release_date to decade and duration_ms to minutes
+        // Filter out data points without valid release dates
+        data = data.filter(d => d.release_date && !isNaN(new Date(d.release_date).getFullYear()));
         data.forEach(d => {
             d.year = new Date(d.release_date).getFullYear();
             d.decade = Math.floor(d.year / 10) * 10;
