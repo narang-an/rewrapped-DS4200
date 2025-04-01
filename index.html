@@ -1,118 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Spotify ReWrapped</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
 
-<body>
+  <body>
     <nav class="navbar">
-        <div class="nav-content">
-            <ul class="nav-links">
-                <li><a href="wordcloud/word_cloud.html">Word Cloud</a></li>
-                <li class="dropdown">
-                    <a href="#" class="dropbtn">Barplots ▼</a>
-                    <div class="dropdown-content">
-                        <a href="barplot/barplot.html">Number of Songs by Key</a>
-                        <a href="barchart/barchart.html">Various Features by Key</a>
-                    </div>
-                </li>
-                <li class="dropdown">
-                    <a href="#" class="dropbtn">Scatterplots ▼</a>
-                    <div class="dropdown-content">
-                        <a href="popularity-scatterplot/pop-scatterplot.html">Various Features by Popularity</a>
-                        <a href="time-signature/time-signature.html">Danceability by Time Signature</a>
-                    </div>
-                </li>
-                <li><a href="linegraph/linegraph.html">Linegraph</a></li>
-            </ul>
-            <div class="website-name"><a href="index.html">Spotify ReWrapped</a></div>
+      <div class="nav-content">
+        <ul class="nav-links">
+          <li><a href="wordcloud/word_cloud.html">Word Cloud</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropbtn">Barplots ▼</a>
+            <div class="dropdown-content">
+              <a href="barplot/barplot.html">Number of Songs by Key</a>
+              <a href="barchart/barchart.html">Various Features by Key</a>
+            </div>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropbtn">Scatterplots ▼</a>
+            <div class="dropdown-content">
+              <a href="popularity-scatterplot/pop-scatterplot.html"
+                >Various Features by Popularity</a
+              >
+              <a href="time-signature/time-signature.html"
+                >Danceability by Time Signature</a
+              >
+            </div>
+          </li>
+          <li><a href="linegraph/linegraph.html">Linegraph</a></li>
+        </ul>
+        <div class="website-name">
+          <a href="index.html">Spotify ReWrapped</a>
         </div>
+      </div>
     </nav>
 
     <div class="container">
-        <section class="intro">
-            <h1>Welcome to Spotify ReWrapped</h1>
-        </section>
+      <section class="intro">
+        <h1>Welcome to Spotify ReWrapped</h1>
+      </section>
 
-        <p>Music is an integral part of our daily lives, and it can reflect our moods, routines, and cultural influences. With streaming platforms like Spotify, music consumption has become more accessible and personalized than ever. These platforms generate vast amounts of data that reveal individual listening habits, including top genres, favorite artists, and frequently played songs. Analyzing this data can reveal unique patterns, highlighting both shared and distinct musical preferences among users.
-            This project aims to build on that idea by creating a personalized Spotify Wrapped experience. Given its popularity, our goal is to develop our own version using the Spotify API, which can offer users deeper insights into their listening habits. By leveraging this data, we can uncover intriguing patterns and trends, providing an engaging way for users to interact with  their music statistics.
-        </p>
+      <p>
+        Music is an integral part of our daily lives, and it can reflect our
+        moods, routines, and cultural influences. With streaming platforms like
+        Spotify, music consumption has become more accessible and personalized
+        than ever. These platforms generate vast amounts of data that reveal
+        individual listening habits, including top genres, favorite artists, and
+        frequently played songs. Analyzing this data can reveal unique patterns,
+        highlighting both shared and distinct musical preferences among users.
+        This project aims to build on that idea by creating a personalized
+        Spotify Wrapped experience. Given its popularity, our goal is to develop
+        our own version using the Spotify API, which can offer users deeper
+        insights into their listening habits. By leveraging this data, we can
+        uncover intriguing patterns and trends, providing an engaging way for
+        users to interact with their music statistics.
+      </p>
 
-        <section class="intro">
-            <h2>Introduction to the Dataset</h2>
-        </section>
+      <section class="intro">
+        <h2>Introduction to the Dataset</h2>
+      </section>
 
-        <p>
-            insert paragraph here
-        </p>
+      <p>insert paragraph here</p>
 
-        <section class="intro">
-            <h2>General Conclusions</h2>
-        </section>
+      <section class="intro">
+        <h2>General Conclusions</h2>
+      </section>
 
-        <p>
-            insert paragraph here
-        </p>
+      <p>insert paragraph here</p>
 
-        <section class="intro">
-            <h2>Visit Our Graphs!</h2>
-        </section>
+      <section class="intro">
+        <h2>Visit Our Graphs!</h2>
+      </section>
 
-        <div class="button-grid">
-            <button class="graph-button" onclick="window.location.href='wordcloud/word_cloud.html'">
-                Word Cloud of Words in Titles
-            </button>
-            <button class="graph-button" onclick="window.location.href='barplot/barplot.html'">
-                Number of Songs by Key
-            </button>
-            <button class="graph-button" onclick="window.location.href='barchart/barchart.html'">
-                Various Features by Key
-            </button>
-            <button class="graph-button" onclick="window.location.href='popularity-scatterplot/pop-scatterplot.html'">
-                Various Features vs. Popularity Scatterplot 
-            </button>
-            <button class="graph-button" onclick="window.location.href='time-signature/time-signature.html'">
-                Popularity Time Signature Scatterplot Heatmap
-            </button>
-            <button class="graph-button" onclick="window.location.href='linegraph/linegraph.html'">
-                Average Song Duration Over Time
-            </button>
+      <div class="button-grid">
+        <button
+          class="graph-button"
+          onclick="window.location.href='wordcloud/word_cloud.html'"
+        >
+          Word Cloud of Words in Titles
+        </button>
+        <button
+          class="graph-button"
+          onclick="window.location.href='barplot/barplot.html'"
+        >
+          Number of Songs by Key
+        </button>
+        <button
+          class="graph-button"
+          onclick="window.location.href='barchart/barchart.html'"
+        >
+          Various Features by Key
+        </button>
+        <button
+          class="graph-button"
+          onclick="window.location.href='popularity-scatterplot/pop-scatterplot.html'"
+        >
+          Various Features vs. Popularity Scatterplot
+        </button>
+        <button
+          class="graph-button"
+          onclick="window.location.href='time-signature/time-signature.html'"
+        >
+          Popularity Time Signature Scatterplot Heatmap
+        </button>
+        <button
+          class="graph-button"
+          onclick="window.location.href='linegraph/linegraph.html'"
+        >
+          Average Song Duration Over Time
+        </button>
+      </div>
+
+      <section class="intro">
+        <h2>About Us</h2>
+      </section>
+
+      <div class="about-us-container">
+        <div class="about-column">
+          <div class="profile-picture">
+            <img src="images/profile1.png" alt="Picture of Diya" />
+          </div>
+          <h3>Diya Ganesh</h3>
+          <p>
+            Hi! I’m Diya, a combined Data Science and Behavioral Neuroscience
+            student at Northeastern University! I’m very interested in this
+            project because I love music and am an avid concert-goer (I’ve been
+            to 3 in the past month!) I love discovering new music and getting
+            recommendations from peers, so seeing other students’ favorite songs
+            was really cool to me.
+          </p>
         </div>
-
-        <section class="intro">
-            <h2>About Us</h2>
-        </section>
-
-        <div class="about-us-container">
-            <div class="about-column">
-                <div class="profile-picture">
-                    <img src="images/profile1.png" alt="Picture of Diya">
-                </div>
-                <h3>Diya Ganesh</h3>
-                <p>Hi! I’m Diya, a combined Data Science and Behavioral Neuroscience student at Northeastern University! 
-                    I’m very interested in this project because I love music and am an avid concert-goer 
-                    (I’ve been to 3 in the past month!) I love discovering new music and getting recommendations from peers, 
-                    so seeing other students’ favorite songs was really cool to me.</p>
-            </div>
-            <div class="about-column">
-                <div class="profile-picture">
-                    <img src="images/profile2.jpg" alt="Picture of Anusha">
-                </div>
-                <h3>Anusha Narang</h3>
-                <p>introduction</p>
-            </div>
-            <div class="about-column">
-                <div class="profile-picture">
-                    <img src="images/profile3.jpg" alt="Picture of Carissa">
-                </div>
-                <h3>Carissa Chen</h3>
-                <p>introduction</p>
-            </div>
+        <div class="about-column">
+          <div class="profile-picture">
+            <img src="images/profile2.png" alt="Picture of Anusha" />
+          </div>
+          <h3>Anusha Narang</h3>
+          <p>
+            Hello, I'm Anusha, a Computer Science student at Northeastern. I'm
+            interested in exploring how data can reveal patterns in human
+            behavior, and music is a fascinating way to study this.
+          </p>
         </div>
+        <div class="about-column">
+          <div class="profile-picture">
+            <img src="images/profile3.jpg" alt="Picture of Carissa" />
+          </div>
+          <h3>Carissa Chen</h3>
+          <p>introduction</p>
+        </div>
+      </div>
     </div>
-</body>
+  </body>
 </html>
-
