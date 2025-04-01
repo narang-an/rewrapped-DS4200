@@ -27,7 +27,38 @@
             <div class="website-name"><a href="../index.html">Spotify ReWrapped</a></div>
         </div>
     </nav>
-    <div id="2b0fb045-94e7-4570-ba83-fc83a5647876" class="plotly-graph-div" style="height:100%; width:100%;"></div>
-    <script src="./plotly.js" />
+
+    <section class="intro">
+        <h1>Number of Songs in Each Musical Key Bar Chart</h1>
+    </section>
+  
+    <p style="text-align: center;">
+        This visualization is interactive! Hover over a bar to see the number of songs in that key.
+    </p>
+
+    <div class="two-column-container">
+        <div class="visualization-column">
+            <div id="a94b9fed-5ea3-4f70-af1f-bda55c2565c1" class="plotly-graph-div"></div>
+        </div>
+        <div class="description-column">
+            <div class="description">
+                <h2>Description</h2>
+                <p>
+                    The bar chart displays the distribution of songs across musical keys, categorized by mode (major or minor). 
+                    Each key is represented numerically from 0 to 11, corresponding to the 12 chromatic scale pitches: 
+                    0 = C, 1 = C♯/D♭, 2 = D, 3 = D♯/E♭, 4 = E, 5 = F, 6 = F♯/G♭, 7 = G, 8 = G♯/A♭, 9 = A, 10 = A♯/B♭, and 11 = B. 
+                    These values denote the root note of each key, and the chart reflects how frequently songs occur in each key-mode pairing.
+
+                    Keys 0 (C), 1 (C♯/D♭), and 8 (G♯/A♭) each feature 13 songs, the highest among all keys, though their mode distributions 
+                    differ significantly. Keys 0 and 8 favor the major key, while key 1 is nearly balanced (7 major, 6 minor). Key 6 (F♯/G♭) 
+                    is the only other with a near-even split (5 major, 6 minor). Most keys  show a clear preference for major mode, especially 
+                    2 (D), 7 (G), and 8 (G♯/A♭). Keys 5 and 10 are two of the few keys that favor minor. Overall, major keys dominate, but 
+                    minor keys remain a significant and stylistically relevant component of the dataset.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script src="./plotly.js"></script>
 </body>
 </html>

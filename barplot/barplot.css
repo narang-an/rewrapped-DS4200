@@ -1,1 +1,43 @@
 @import url("../styles.css");
+
+.two-column-container {
+    display: flex;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.visualization-column {
+    flex: 1;
+    min-width: 0;
+}
+
+.description-column {
+    flex: 1;
+    min-width: 0;
+}
+
+.plotly-graph-div {
+    width: 100%;
+    height: 500px;
+}
+
+.description {
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+.description h2 {
+    margin-bottom: 1rem;
+}
+
+.description p {
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .two-column-container {
+        flex-direction: column;
+    }
+}
