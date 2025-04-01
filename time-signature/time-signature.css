@@ -1,7 +1,6 @@
 /* Import base styles */
 @import url('../styles.css');
 
-/* Word cloud specific container styling */
 #vis {
     border-radius: 8px;
     margin-top: 80px;
@@ -22,7 +21,6 @@
 
 /* Vega controls styling */
 .vega-embed .vega-actions {
-    background-color: #404040 !important;
     border: none !important;
     border-radius: 4px;
     padding: 0.5rem !important;
@@ -41,7 +39,7 @@
 
 /* Title styling */
 .vega-embed .chart-title {
-    font-family: 'Playfair Display', serif !important;
+    font-family: 'Faculty Glyphic', sans-serif !important;
     color: #ffffff !important;
     font-size: 1.5rem !important;
     margin-bottom: 1rem !important;
@@ -55,14 +53,32 @@
     color: #ffffff !important;
     font-family: 'Faculty Glyphic', sans-serif !important;
     padding: 0.5rem 1rem !important;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2) !important;
 }
 
-/* Container for the visualization */
-.visualization-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 2rem;
+/* Two column container */
+.two-column-container {
+    display: flex;
+    justify-content: right;
+    gap: 4rem;
+}
+
+.visualization-column {
+    max-width: 35%;
+    min-width: 0;
+    z-index: 1;
+}
+
+.description-column {
+    max-width: 47%;
+    min-width: 0;
+    z-index: 3;
+}
+
+/* Description styling */
+.description {
+    padding: 5rem;
+    border-radius: 8px;
+    font-family: 'Faculty Glyphic', sans-serif !important;
 }
 
 /* Responsive design for visualization */
@@ -79,32 +95,10 @@
     #vis.vega-embed {
         transform: scale(0.8);
     }
-}
 
-/* Loading state */
-.loading {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 400px;
-    color: #1DB954;
-    font-size: 1.2rem;
-}
-
-/* Error state */
-.error-message {
-    color: #ff4444;
-    text-align: center;
-    padding: 2rem;
-    background-color: #282828;
-    border-radius: 8px;
-    margin-top: 80px;
-} 
-
-
-p {
-    padding-top: 20px;
-    padding-bottom: 5px;
-    padding-left: 7%;
-    padding-right: 7%;
+    .two-column-container {
+        flex-direction: column;
+        padding: 1rem;
+        margin-top: 120px;
+    }
 }
