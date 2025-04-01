@@ -1,10 +1,31 @@
 /* Import base styles */
 @import url('../styles.css');
 
+/* Two column container */
+.two-column-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 80px auto 0;
+    padding: 0 2rem;
+    gap: 2rem;
+}
+
+.visualization-column {
+    flex: 1;
+    min-width: 0;
+}
+
+.description-column {
+    flex: 1;
+    min-width: 0;
+}
+
 /* Word cloud specific container styling */
 #vis {
     border-radius: 8px;
-    margin-top: 80px;
+    width: 100%;
 }
 
 /* Vega-Embed specific styling */
@@ -25,7 +46,6 @@
     background-color: #404040 !important;
     border: none !important;
     border-radius: 4px;
-    padding: 0.5rem !important;
 }
 
 .vega-embed .vega-actions a {
@@ -55,25 +75,38 @@
     color: #ffffff !important;
     font-family: 'Faculty Glyphic', sans-serif !important;
     padding: 0.5rem 1rem !important;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2) !important;
 }
 
 /* Container for the visualization */
 .visualization-container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 2rem;
 }
 
-/* Responsive design for visualization */
+/* Description styling */
+.description {
+    padding: 1rem;
+    border-radius: 8px;
+    height: 100%;
+}
+
+.description p {
+    padding: 0;
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* Responsive design */
 @media (max-width: 768px) {
-    #vis {
+    .two-column-container {
+        flex-direction: column;
         padding: 1rem;
         margin-top: 120px;
     }
 
-    .visualization-container {
-        padding: 1rem;
+    .visualization-column,
+    .description-column {
+        width: 100%;
     }
 
     #vis.vega-embed {
@@ -81,22 +114,9 @@
     }
 }
 
-/* Loading state */
-.loading {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 400px;
-    color: #1DB954;
-    font-size: 1.2rem;
+p {
+    padding-top: 20px;
+    padding-bottom: 5px;
+    padding-left: 7%;
+    padding-right: 7%;
 }
-
-/* Error state */
-.error-message {
-    color: #ff4444;
-    text-align: center;
-    padding: 2rem;
-    background-color: #282828;
-    border-radius: 8px;
-    margin-top: 80px;
-} 
