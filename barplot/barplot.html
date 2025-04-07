@@ -1,5 +1,7 @@
+<!DOCTYPE html>
 <html>
-<head><meta charset="utf-8" />
+<head>
+    <meta charset="utf-8" />
     <link rel="stylesheet" href="barplot.css">
 </head>
 <body>
@@ -37,7 +39,8 @@
 
     <div class="two-column-container">
         <div class="visualization-column">
-            <div id="a94b9fed-5ea3-4f70-af1f-bda55c2565c1" class="plotly-graph-div"></div>
+         
+            <div id="plotly-chart" class="plotly-graph-div"></div>
         </div>
         <div class="description-column">
             <div class="description">
@@ -58,6 +61,16 @@
         </div>
     </div>
 
-    <script src="./plotly.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script>
+        
+        fetch('https://raw.githubusercontent.com/narang-an/rewrapped-DS4200/refs/heads/main/barplot/bar_plot.html')
+            .then(response => response.text())
+            .then(data => {
+                // Inject the content from the raw file into the div
+                document.getElementById('plotly-chart').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading chart:', error));
+    </script>
 </body>
 </html>
