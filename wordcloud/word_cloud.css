@@ -6,9 +6,8 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    max-width: 1200px;
-    margin: 80px auto 0;
-    padding: 0 2rem;
+    max-width: 100%;
+    padding: 2rem;
     gap: 2rem;
 }
 
@@ -22,59 +21,9 @@
     min-width: 0;
 }
 
-/* Word cloud specific container styling */
 #vis {
     border-radius: 8px;
     width: 100%;
-}
-
-/* Vega-Embed specific styling */
-#vis.vega-embed {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#vis.vega-embed details,
-#vis.vega-embed details summary {
-    position: relative;
-}
-
-/* Vega controls styling */
-.vega-embed .vega-actions {
-    background-color: #404040 !important;
-    border: none !important;
-    border-radius: 4px;
-}
-
-.vega-embed .vega-actions a {
-    color: #ffffff !important;
-    text-decoration: none !important;
-    padding: 0.5rem 1rem !important;
-    transition: color 0.3s ease;
-}
-
-.vega-embed .vega-actions a:hover {
-    color: #1DB954 !important;
-}
-
-/* Title styling */
-.vega-embed .chart-title {
-    font-family: 'Faculty Glyphic', sans-serif !important;
-    color: #ffffff !important;
-    font-size: 1.5rem !important;
-    margin-bottom: 1rem !important;
-}
-
-/* Tooltip styling */
-#vg-tooltip-element {
-    background-color: #404040 !important;
-    border: none !important;
-    border-radius: 4px !important;
-    color: #ffffff !important;
-    font-family: 'Faculty Glyphic', sans-serif !important;
-    padding: 0.5rem 1rem !important;
 }
 
 /* Container for the visualization */
@@ -107,10 +56,6 @@
     .visualization-column,
     .description-column {
         width: 100%;
-    }
-
-    #vis.vega-embed {
-        transform: scale(0.8);
     }
 }
 
