@@ -3,28 +3,24 @@
 <head>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="barplot.css">
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 </head>
 <body>
     <nav class="navbar">
         <div class="nav-content">
             <ul class="nav-links">
-                <li><a href="../wordcloud/word_cloud.html">Word Cloud</a></li>
-                <li class="dropdown">
-                    <a href="#" class="dropbtn">Barplots ▼</a>
-                    <div class="dropdown-content">
-                        <a href="../barplot/bar_plot.html">Number of Songs by Key</a>
-                        <a href="../barchart/barchart.html">Various Features by Key</a>
-                    </div>
-                </li>
-                <li class="dropdown">
-                    <a href="#" class="dropbtn">Scatterplots ▼</a>
-                    <div class="dropdown-content">
-                        <a href="../popularity-scatterplot/pop-scatterplot.html">Various Features by Popularity</a>
-                        <a href="../time-signature/time-signature.html">Danceability by Time Signature</a>
-                    </div>
-                </li>
                 <li><a href="../linegraph/linegraph.html">Linegraph</a></li>
-            </ul>
+                <li><a href="../wordcloud/word_cloud.html">Word Cloud</a></li>
+                <li><a href="../popularity-scatterplot/pop-scatterplot.html">Scatterplot</a></li>
+                <li><a href="../time-signature/time-signature.html">Heatmap</a></li>
+                <li class="dropdown">
+                  <a href="#" class="dropbtn">Barplots ▼</a>
+                  <div class="dropdown-content">
+                    <a href="../barplot/barplot.html">Number of Songs by Key</a>
+                    <a href="../barchart/barchart.html">Various Features by Key</a>
+                  </div>
+                </li>
+              </ul>
             <div class="website-name"><a href="../index.html">Spotify ReWrapped</a></div>
         </div>
     </nav>
@@ -39,7 +35,6 @@
 
     <div class="two-column-container">
         <div class="visualization-column">
-         
             <div id="plotly-chart" class="plotly-graph-div"></div>
         </div>
         <div class="description-column">
@@ -58,17 +53,6 @@
             </div>
         </div>
     </div>
-
-    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-    <script>
-        
-        fetch('https://raw.githubusercontent.com/narang-an/rewrapped-DS4200/refs/heads/main/barplot/bar_plot.html')
-            .then(response => response.text())
-            .then(data => {
-                // Inject the content from the raw file into the div
-                document.getElementById('plotly-chart').innerHTML = data;
-            })
-            .catch(error => console.error('Error loading chart:', error));
-    </script>
+    <script src="visualization.js"></script>
 </body>
 </html>
