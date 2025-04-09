@@ -32,7 +32,7 @@
     </section>
 
     <p style="text-align: center;">
-      This visualization is interactive! Hover over a point to see the track, artist, popularity score and the selected metric.
+      This visualization is interactive! Select a range of values on the y-axis to filter the data points in the scatter plots. The selected range will be highlighted in blue, while the rest of the data points will be displayed in light gray. Hover over the data points to see more information about each song, including its name, artist, and popularity score.
     </p>
 
     <div class="container">
@@ -49,6 +49,9 @@
           <br>
           <br>
           Duration and Tempo also exhibit a relatively broad spread. Popular songs generally fall within a typical duration range (around 150,000 to 250,000 milliseconds, or 2.5 to 4 minutes), but outliers exist. Tempo, while somewhat clustered between 100 and 150 BPM for popular songs, doesn't show a sharp trend, indicating that while there might be a sweet spot, tempo alone doesn’t determine a song’s success.
+          <br>
+          <br>
+          Additionally, the selectedtion tool allows us to see patterns across attributes. For example if I select all songs with an energy of more than 0.6, I can see that these songs tend to have a higher loudness score and lower accousticness range. If I select songs with an accousticness of 0.8 to 1.0, I can see that these songs tend to have a lower energy score. This suggests that songs with a more acoustic sound are less likely to be energetic, which is consistent with the idea that acoustic music is often more mellow and introspective.
           <br>
           <br>
           Overall, while no single attribute guarantees popularity, the data suggests that a combination of danceability, energy, emotional positivity, and vocal presence are common traits among successful songs.
