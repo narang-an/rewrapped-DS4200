@@ -32,10 +32,6 @@
     transition: color 0.3s ease;
 }
 
-.vega-embed .vega-actions a:hover {
-    color: #1DB954 !important;
-}
-
 /* Title styling */
 .vega-embed .chart-title {
     font-family: 'Faculty Glyphic', sans-serif !important;
@@ -44,15 +40,6 @@
     margin-bottom: 1rem !important;
 }
 
-/* Tooltip styling */
-#vg-tooltip-element {
-    background-color: #404040 !important;
-    border: none !important;
-    border-radius: 4px !important;
-    color: #ffffff !important;
-    font-family: 'Faculty Glyphic', sans-serif !important;
-    padding: 0.5rem 1rem !important;
-}
 
 /* Two column container */
 .two-column-container {
@@ -65,10 +52,14 @@
 
 .visualization-column {
     z-index: 1;
+    flex: 1;
+    width: 50%;
 }
 
 .description-column {
     z-index: 3;
+    flex: 1;
+    width: 50%;
 }
 
 /* Description styling */

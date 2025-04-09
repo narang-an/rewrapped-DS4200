@@ -34,7 +34,14 @@ influence a song’s appeal, they do not single-handedly determine its success.
 
 
 HEATMAP — VARIOUS FEATURES:
-asdfasgasd
+The purpose of this visualization is to explore patterns and relationships between different musical attributes using a 
+dynamic heatmap. Users can select any combination of features for the x and y axes from a dropdown list of 10 variables, 
+enabling 100 unique pairings. The color intensity indicates the number of songs that fall within specific value ranges, 
+with darker shades representing higher concentrations. This setup makes it easy to identify common value ranges, such as 
+energy levels between 0.5 and 0.6 or song durations between 200,000 and 300,000 milliseconds. When both axes are set to the 
+same variable, the diagonal of the heatmap highlights the most representative range for that feature. This flexible, 
+interactive format offers insights into the dataset’s typical characteristics and helps uncover correlations or clusters 
+among audio features.
 
 
 BARCHART — KEY VS. NUMBER OF SONGS:
