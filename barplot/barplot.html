@@ -1,58 +1,79 @@
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="barplot.css">
+    <link rel="stylesheet" href="barplot.css" />
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-</head>
-<body>
+  </head>
+  <body>
     <nav class="navbar">
-        <div class="nav-content">
-            <ul class="nav-links">
-                <li><a href="../linegraph/linegraph.html">Linegraph</a></li>
-                <li><a href="../wordcloud/word_cloud.html">Word Cloud</a></li>
-                <li><a href="../popularity-scatterplot/pop-scatterplot.html">Scatterplot</a></li>
-                <li><a href="../time-signature/time-signature.html">Heatmap</a></li>
-                <li class="dropdown">
-                  <a href="#" class="dropbtn">Barplots ▼</a>
-                  <div class="dropdown-content">
-                    <a href="../barplot/barplot.html">Number of Songs by Key</a>
-                    <a href="../barchart/barchart.html">Various Features by Key</a>
-                  </div>
-                </li>
-              </ul>
-            <div class="website-name"><a href="../index.html">Spotify ReWrapped</a></div>
+      <div class="nav-content">
+        <ul class="nav-links">
+          <li>
+            <a href="../linegraph/linegraph.html">Song Length Over Time</a>
+          </li>
+          <li>
+            <a href="../wordcloud/word_cloud.html"
+              >Song Attribute Relationships & Trends</a
+            >
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropbtn">Songs by Musical Key ▼</a>
+            <div class="dropdown-content">
+              <a href="../popularity-scatterplot/pop-scatterplot.html">Scatterplot</a>
+              <a href="../heatmap/heatmap.html">Heatmap</a>
+            </div>
+          </li>
+
+          <li class="dropdown">
+            <a href="#" class="dropbtn">Songs by Musical Key ▼</a>
+            <div class="dropdown-content">
+              <a href="../barplot/barplot.html">Songs Distribution by Key</a>
+              <a href="../barchart/barchart.html">Various Features by Key</a>
+            </div>
+          </li>
+        </ul>
+        <div class="website-name">
+          <a href="../index.html">Spotify ReWrapped</a>
         </div>
+      </div>
     </nav>
 
     <section class="intro">
-        <h1>Number of Songs in Each Musical Key Bar Chart</h1>
+      <h1>Number of Songs in Each Musical Key Bar Chart</h1>
     </section>
-  
-    <p style="text-align: center;">
-        This visualization is interactive! Hover over a bar to see the number of songs in that key.
+
+    <p style="text-align: center">
+      This visualization is interactive! Hover over a bar to see the number of
+      songs in that key.
     </p>
 
     <div class="two-column-container">
-        <div class="visualization-column">
-            <div id="plotly-chart" class="plotly-graph-div"></div>
+      <div class="visualization-column">
+        <div id="plotly-chart" class="plotly-graph-div"></div>
+      </div>
+      <div class="description-column">
+        <div class="description">
+          <h2>Description</h2>
+          <p>
+            The bar chart displays the distribution of songs across musical
+            keys, categorized by mode (major or minor). The musical keys are
+            represented along the x-axis, while the y-axis shows the number of
+            songs in each key. The bars are stacked to show the breakdown
+            between major and minor modes, with the blue portion representing
+            major and the red portion representing minor. Major keys are
+            generally associated with more upbeat, energetic, and positive
+            music, which is reflected in the higher number of songs in keys like
+            A and G♯/A♭. On the other hand, minor keys tend to convey a more
+            melancholic, sad, or introspective tone, as seen in keys like A♯/B♭
+            and D# / E♭, where the minor mode dominates. Overall, while major
+            keys are more prevalent in this dataset, the minor keys still make
+            up a significant portion, highlighting the diversity of emotional
+            expression in music across different keys.
+          </p>
         </div>
-        <div class="description-column">
-            <div class="description">
-                <h2>Description</h2>
-                <p>
-                    The bar chart displays the distribution of songs across musical keys, categorized by mode (major or minor). 
-                    The musical keys are represented along the x-axis, while the y-axis shows the number of songs in each key. 
-                    The bars are stacked to show the breakdown between major and minor modes, with the blue portion representing 
-                    major and the red portion representing minor. Major keys are generally associated with more upbeat, energetic, 
-                    and positive music, which is reflected in the higher number of songs in keys like A and G♯/A♭. On the other hand,
-                    minor keys tend to convey a more melancholic, sad, or introspective tone, as seen in keys like A♯/B♭ and D# / E♭,
-                    where the minor mode dominates. Overall, while major keys are more prevalent in this dataset, the minor keys 
-                    still make up a significant portion, highlighting the diversity of emotional expression in music across different keys.
-                </p>
-            </div>
-        </div>
+      </div>
     </div>
     <script src="visualization.js"></script>
-</body>
+  </body>
 </html>
