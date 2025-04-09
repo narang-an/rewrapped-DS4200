@@ -58,25 +58,24 @@
 /* Two column container */
 .two-column-container {
     display: flex;
-    justify-content: right;
-    gap: 4rem;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 100%;
+    padding: 2rem;
 }
 
 .visualization-column {
-    max-width: 35%;
-    min-width: 0;
     z-index: 1;
 }
 
 .description-column {
-    max-width: 47%;
-    min-width: 0;
     z-index: 3;
 }
 
 /* Description styling */
 .description {
-    padding: 5rem;
+    padding: 1rem;
+    margin-top: 2rem;
     border-radius: 8px;
     font-family: 'Faculty Glyphic', sans-serif !important;
 }
@@ -85,7 +84,7 @@
 @media (max-width: 768px) {
     #vis {
         padding: 1rem;
-        margin-top: 120px;
+        margin-top: 1rem;
     }
 
     .visualization-container {
