@@ -16,6 +16,7 @@ body {
 
 .visualization {
   flex: 1;
+  margin-top: 1rem;
   padding: 1rem;
   border-radius: 8px;
 }

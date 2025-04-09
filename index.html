@@ -11,7 +11,10 @@
     <nav class="navbar">
       <div class="nav-content">
         <ul class="nav-links">
+          <li><a href="linegraph/linegraph.html">Linegraph</a></li>
           <li><a href="wordcloud/word_cloud.html">Word Cloud</a></li>
+          <li><a href="popularity-scatterplot/pop-scatterplot.html">Scatterplot</a></li>
+          <li><a href="time-signature/time-signature.html">Heatmap</a></li>
           <li class="dropdown">
             <a href="#" class="dropbtn">Barplots ▼</a>
             <div class="dropdown-content">
@@ -19,18 +22,6 @@
               <a href="barchart/barchart.html">Various Features by Key</a>
             </div>
           </li>
-          <li class="dropdown">
-            <a href="#" class="dropbtn">Scatterplots ▼</a>
-            <div class="dropdown-content">
-              <a href="popularity-scatterplot/pop-scatterplot.html"
-                >Various Features by Popularity</a
-              >
-              <a href="time-signature/time-signature.html"
-                >Danceability by Time Signature</a
-              >
-            </div>
-          </li>
-          <li><a href="linegraph/linegraph.html">Linegraph</a></li>
         </ul>
         <div class="website-name">
           <a href="index.html">Spotify ReWrapped</a>
@@ -68,9 +59,9 @@
       <section class="intro">
         <h2>Introduction to the Dataset</h2>
       </section>
-
-      
       <p>This dataset contains information on 101 Spotify tracks, capturing a wide range of musical and metadata features. Each row represents a single song and includes details such as the track and album name, artist, release date, and record label. The dataset also features a variety of musical attributes commonly used in audio analysis, including:
+        <br>
+        <br>
         <ul style="margin-left: 40px;">
             <li>Duration (ms) – Length of the song in milliseconds</li>
             <li>Popularity – A score from Spotify reflecting how popular the track is</li>
@@ -80,11 +71,10 @@
             <li>Tempo – Beats per minute (BPM)</li>
             <li>Time Signature – Rhythmic structure of the song</li>
         </ul>
-    </p>
-    <p>
+        <br>
         This dataset was joined with information collected from a survey conducted in our machine learning class, where students were asked to list their favorite songs. The survey responses were matched with corresponding attributes from this dataset, which were obtained from the <a href="https://www.kaggle.com/datasets/yasserh/song-popularity-dataset" target="_blank">Song Popularity Dataset on Kaggle</a>.
-    </p>
-    <p>
+        <br>
+        <br>
         Overall, this dataset offers a compact yet insightful glimpse into the characteristics of music on Spotify. With a combination of musical attributes, popularity metrics, and metadata like artist and release information, it allows for a wide range of analyses, from identifying patterns in song structure to exploring what makes a track popular.
     </p>
     
@@ -94,24 +84,24 @@
       </section>
 
     <div class="button-grid">
-        <button class="graph-button" onclick="window.location.href='wordcloud/word_cloud.html'">
-          Word Cloud of Words in Titles
-        </button>
-        <button class="graph-button" onclick="window.location.href='barplot/barplot.html'">
-          Number of Songs by Key
-        </button>
-        <button class="graph-button" onclick="window.location.href='barchart/barchart.html'">
-          Various Features by Key
-        </button>
-        <button class="graph-button" onclick="window.location.href='popularity-scatterplot/pop-scatterplot.html'">
+      <button class="graph-button" onclick="window.location.href='linegraph/linegraph.html'">
+        Average Song Duration Over Time Linegraph
+      </button>
+      <button class="graph-button" onclick="window.location.href='wordcloud/word_cloud.html'">
+        Most Common Words in Song Titles Word Cloud
+      </button>
+      <button class="graph-button" onclick="window.location.href='popularity-scatterplot/pop-scatterplot.html'">
           Various Features vs. Popularity Scatterplot 
+      </button>
+      <button class="graph-button" onclick="window.location.href='time-signature/time-signature.html'">
+        Various Features Heatmap
+      </button>
+      <button class="graph-button" onclick="window.location.href='barplot/barplot.html'">
+        Number of Songs by Key Barplot
         </button>
-        <button class="graph-button" onclick="window.location.href='time-signature/time-signature.html'">
-          Popularity Time Signature Scatterplot Heatmap
-        </button>
-        <button class="graph-button" onclick="window.location.href='linegraph/linegraph.html'">
-          Average Song Duration Over Time
-        </button>
+      <button class="graph-button" onclick="window.location.href='barchart/barchart.html'">
+        Various Features by Key Barplot
+      </button>
     </div>
 
     <section class="intro">
@@ -119,20 +109,35 @@
     </section>
 
     <p>
-        Our visualizations show that while some patterns emerge, musical taste is highly individual and shaped by a wide range of factors.  
-    </p>
-    <p>
-        One key finding is the recurring presence of themes in song titles. Words like "love" and "home" frequently appear, reflecting common themes of emotion and nostalgia. This suggests that listeners are drawn to songs that evoke connection, memory, and partnership.  
-        When examining musical keys, we see a clear preference for major keys, particularly C, G♯/A♭, and D, which aligns with the upbeat sound of many popular songs. However, minor keys also play a significant role, indicating that songs with more somber or introspective qualities still resonate with audiences. The balance between major and minor modes shows that listeners appreciate a range of emotional tones in their favorite music.  
-    </p>
-    <p>
-        Attributes like energy, danceability, loudness, and tempo vary widely across popular songs. While some keys and attributes are linked to higher energy or danceability, there’s no consistent pattern tying these characteristics to popularity. This suggests that listeners’ preferences are shaped not just by specific traits but by a mix of factors that create an emotional connection.  
-    </p>
-    <p>
-        One noticeable trend is the change in song duration over the decades. While older songs were generally longer, modern hits are shorter, likely due to changes in how we consume music, especially with the rise of streaming platforms.  
-    </p>
-    <p>
-        Overall, our data visualizations show that musical preferences are complex, shaped by cultural trends and personal taste. Although some patterns are evident, like the preference for major keys and shorter songs, individual choices vary greatly, highlighting the diverse ways music resonates with listeners.
+        Our visualizations show that while some patterns emerge, musical taste is highly individual and shaped by a wide 
+        range of factors.  
+        <br>
+        <br>
+        One key finding is the recurring presence of themes in song titles. Words like "love" and "home" frequently 
+        appear, reflecting common themes of emotion and nostalgia. This suggests that listeners are drawn to songs 
+        that evoke connection, memory, and partnership. When examining musical keys, we see a clear preference for 
+        major keys, particularly C, G♯/A♭, and D, which aligns with the upbeat sound of many popular songs. However, 
+        minor keys also play a significant role, indicating that songs with more somber or introspective qualities still 
+        resonate with audiences. The balance between major and minor modes shows that listeners appreciate a range of 
+        emotional tones in their favorite music.  
+        <br>
+        <br>
+        Attributes like energy, danceability, loudness, and tempo vary widely across popular songs. While some keys and 
+        attributes are linked to higher energy or danceability, there’s no consistent pattern tying these characteristics 
+        to popularity. This suggests that listeners’ preferences are shaped not just by specific traits but by a mix of 
+        factors that create an emotional connection.  
+        <br>
+        <br>
+        One noticeable trend is the change in song duration over the decades. While older songs were generally longer, 
+        modern hits are shorter, likely due to changes in how we consume music, especially with the rise of streaming 
+        platforms.  
+        <br>
+        <br>
+        Overall, our data visualizations show that musical preferences are complex, shaped by cultural trends and personal 
+        taste. Although some patterns are evident, like the preference for major keys and shorter songs, individual choices 
+        vary greatly, highlighting the diverse ways music resonates with listeners. In the future, it would be interesting 
+        to see how these patterns change over time, as well as how they differ across different genres and cultures. We could
+        ask the same group of people what their favorite song is every year and see how their tastes change over time.
     </p>
 
 
