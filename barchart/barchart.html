@@ -31,14 +31,8 @@
     <nav class="navbar">
       <div class="nav-content">
         <ul class="nav-links">
-          <li>
-            <a href="../linegraph/linegraph.html">Song Length Over Time</a>
-          </li>
-          <li>
-            <a href="../wordcloud/word_cloud.html"
-              >Word Frequency in Song Titles</a
-            >
-          </li>
+          <li><a href="../linegraph/linegraph.html">Song Length Over Time</a></li>
+          <li><a href="../wordcloud/word_cloud.html">Word Frequency in Song Titles</a></li>
           <li class="dropdown">
             <a href="#" class="dropbtn">Song Attribute Relationships ▼</a>
             <div class="dropdown-content">
@@ -60,8 +54,9 @@
         </div>
       </div>
     </nav>
+
     <section class="intro">
-      <h1>Average Attributes by Key Bar Plot</h1>
+      <h1>Various Features Distribution by Key Barplot</h1>
     </section>
 
     <p style="text-align: center">
@@ -108,7 +103,7 @@
     <script>
       (function (vegaEmbed) {
         var spec = {
-          config: { view: { continuousWidth: 300, continuousHeight: 300 } },
+          config: { view: { continuousWidth: 300, continuousHeight: 400 } },
           data: { name: "data-4ad871a690c1ff30f572cf95e0c38a96" },
           mark: { type: "bar" },
           encoding: {
